@@ -5,10 +5,10 @@ window.title("Geometric Progression")
 window.geometry('400x500+300+300')
 window.resizable(0,0)
 
+#The Frames
 arow = tk.Frame(window)
 arow.pack(expand = True, fill = "x")
 
-#The Frames
 crrow = tk.Frame(window)
 crrow.pack(expand = True, fill = "x")
 
