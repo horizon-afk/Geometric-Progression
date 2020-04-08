@@ -8,6 +8,7 @@ window.resizable(0,0)
 arow = tk.Frame(window)
 arow.pack(expand = True, fill = "x")
 
+#The Frames
 crrow = tk.Frame(window)
 crrow.pack(expand = True, fill = "x")
 
@@ -20,6 +21,7 @@ resultrow.pack(expand = True, fill = "x")
 btnrow = tk.Frame(window)
 btnrow.pack(expand = True, fill = "both")
 
+#The labels
 lbla = tk.Label(
     arow,
     text = "Enter First Term",
@@ -39,7 +41,7 @@ lbln = tk.Label(
     text = "Enter the number of terms",
     font = ("Calibri", 16)
 )
-lbln.grid(row = 0, column = 1)
+lbln.grid(row = 0, column = 1 )
 
 lblr = tk.Label(
     resultrow,
@@ -48,12 +50,13 @@ lblr = tk.Label(
 )
 lblr.grid(row = 0, column = 1)
 
-
+#Text box designs
 a   = tk.StringVar()
 cr  = tk.StringVar()
-n  = tk.StringVar()
+n   = tk.StringVar()
 output = tk.StringVar()
 
+#The first term
 txta = tk.Entry(
     arow,
     width = 10,
@@ -62,7 +65,7 @@ txta = tk.Entry(
 )
 txta.place(x = 280, y = 0)
 
-
+#The common ratio
 txtcr = tk.Entry(
     crrow,
     width = 10,
@@ -71,6 +74,7 @@ txtcr = tk.Entry(
 )
 txtcr.place(x = 280, y = 0)
 
+#The number of terms
 txtn = tk.Entry(
     nrow,
     width = 10,
@@ -79,6 +83,7 @@ txtn = tk.Entry(
 )
 txtn.place(x = 280, y = 0)
 
+#Validation buttons
 def result():
     a = (txta.get())
     r = (txtcr.get())
@@ -93,24 +98,25 @@ def result():
     else:
         tk.messagebox.showwarning("Wrong Data!", "Please enter integer only to proceed.")
         return False
-        
+ 
 def clear():
     a.set("")
     cr.set("")
     n.set("")
     output.set("")
-
-
-lblr2  =  tk.Label(
+    
+#The label to show the output
+lblr2 = tk.Label(
     resultrow,
     width = 10,
     textvariable = output,
     bg = "#ffffff",
     fg = "#000000",
-    font = ("Calibri", 16)
+    font = ("Calibri", 16,)
 )
-lblr2.place(x = 280, y = 0)
-   
+lblr2.place(x = 280, y = 0 )
+
+#The buttons
 btn_findterm = tk.Button(
     btnrow,
     text = "Find the Term",
